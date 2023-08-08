@@ -71,6 +71,12 @@ type PolicyExceptionSpec struct {
 
 	// Exceptions is a list policy/rules to be excluded
 	Exceptions []Exception `json:"exceptions"`
+
+	Images []string `json:"image"`
+}
+
+func (p *PolicyExceptionSpec)HasImages() bool{
+	return len(p.Images) > 0
 }
 
 func (p *PolicyExceptionSpec) BackgroundProcessingEnabled() bool {

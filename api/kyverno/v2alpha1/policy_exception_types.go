@@ -75,7 +75,7 @@ type PolicyExceptionSpec struct {
 	Images []string `json:"image"`
 }
 
-func (p *PolicyExceptionSpec)HasImages() bool{
+func (p *PolicyExceptionSpec) HasImages() bool {
 	return len(p.Images) > 0
 }
 

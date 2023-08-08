@@ -35899,6 +35899,10 @@ spec:
                   - ruleNames
                   type: object
                 type: array
+              image:
+                items:
+                  type: string
+                type: array
               match:
                 description: Match defines match clause used to check if a resource
                   applies to the exception
@@ -36342,6 +36346,7 @@ spec:
                 type: object
             required:
             - exceptions
+            - image
             - match
             type: object
         required:
